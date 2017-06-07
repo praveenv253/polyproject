@@ -57,4 +57,4 @@ def polyproject(point, polyhedron=None, vertices=None):
     #print(final_obj)
     #print(x.value)
 
-    return x.value, polyhedron
+    return np.array(x.value), polyhedron
