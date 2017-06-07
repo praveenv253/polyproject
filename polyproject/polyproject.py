@@ -57,4 +57,6 @@ def polyproject(point, polyhedron=None, vertices=None):
     #print(final_obj)
     #print(x.value)
 
-    return np.array(x.value), polyhedron
+    # Convert x.value from matrix type to ndarray type.
+    # NOTE: This will have to change after cvxpy 1.0, which is more numpythonic
+    return np.squeeze(np.asarray(x.value)), polyhedron
